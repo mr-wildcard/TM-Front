@@ -1,0 +1,19 @@
+{
+  "name": "tm-front",
+  "version": "0.0.1",
+  "description": "Front UI displaying accepted tweets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mr-wildcard/tm-front.git"
+  },
+  "author": "Viala Julien <dev.vialajulien@gmail.com> (https://github.com/mr-wildcard)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mr-wildcard/tm-front/issues"
+  },
+  "homepage": "https://github.com/mr-wildcard/tm-front#readme"
+}

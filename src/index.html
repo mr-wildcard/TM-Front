@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                font-size: 12px;
+            }
+        </style>
+        <title>Tweet front</title>
+    </head>
+
+    <body>
+
+        <script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+        <script src="https://cdn.rawgit.com/pyrsmk/qwest/master/qwest.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>
+
+            var socket;
+
+            qwest
+                .get('http://localhost:3000/accepted-tweets')
+                .then(function (xhr, newTweets) {
+                    /**
+                     * TODO
+                    newTweets.forEach(function (tweet) {
+                        $newTweetsColumn.prepend(Mustache.render(tweetTemplate, tweet));
+                    });
+                     */
+                })
+                .then(openSocket);
+
+            function openSocket() {
+
+                socket = io.connect('http://localhost:3000');
+
+                socket.on("tweet:accepted", function (tweet) {
+
+                });
+            }
+
+        </script>
+    </body>
+</html>
